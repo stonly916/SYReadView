@@ -20,6 +20,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        frame.size.height -= 4.5f;
         self.bookSetter = [[SYReadSet alloc] initWithString:text inSize:frame.size];
         [self createUI];
     }
@@ -68,7 +69,7 @@
 #pragma mark - 使文字顶端对齐
 - (CGRect)textRectForBounds:(CGRect)bounds limitedToNumberOfLines:(NSInteger)numberOfLines {
     bounds = [super textRectForBounds:bounds limitedToNumberOfLines:numberOfLines];
-    bounds.origin.y = MIN((self.frame.size.height - bounds.size.height)/2.f, 2.25f);
+    bounds.origin.y = 5.5f;
     return bounds;
 }
 
