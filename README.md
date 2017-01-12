@@ -14,23 +14,23 @@ NSAttributedString  *concreteAttr = [[NSAttributedString alloc] initWithString:@
 [concreteAttr boundingRectWithSize:CGSizeMake(self.view.frame.size.width-30, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size.height;
 </code></pre>
 <p>默认					：
-height = 3*16 + 2.25*3
+height = 3 * 16 + 2.25 * 3
 <p> _lineSpacing = 2.25f：
-height = 3*16 + 2.25*3
-<p>_lineSpacing = 3.25f：height = 3*16 + 3.25*2 + 2.25 <br>(因为leading和lineSpacing会重合，这段字符串有三段，两个行间距和leading重合了，计算较大的那个)
+height = 3 * 16 + 2.25 * 3
+<p>_lineSpacing = 3.25f：height = 3 * 16 + 3.25 * 2 + 2.25 <br>(因为leading和lineSpacing会重合，这段字符串有三段，两个行间距和leading重合了，计算较大的那个)
 
 #第二种
 <pre><code>
 CGRect rect = [concreteAttr boundingRectWithSize:CGSizeMake(self.view.frame.size.width-30, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
 </code></pre>
- <p> 默认					：height = 3*16
- <p>_lineSpacing = 2.25f：height = 3*16 + 2.25*2
- <p>_lineSpacing = 3.25f：height = 3*16 + 3.25*2
+ <p> 默认					：height = 3 * 16
+ <p>_lineSpacing = 2.25f：height = 3 * 16 + 2.25 * 2
+ <p>_lineSpacing = 3.25f：height = 3 * 16 + 3.25 * 2
 
 #第三种
 <pre><code>
  CGSize size = [concreteAttr size];
  </code></pre>
-  <p>默认					：height = 3*16
-  <p>_lineSpacing = 2.25f：height = 3*16 + 2.25*2
-  <p>_lineSpacing = 3.25f：height = 3*16 + 3.25*2
+  <p>默认					：height = 3 * 16
+  <p>_lineSpacing = 2.25f：height = 3 * 16 + 2.25 * 2
+  <p>_lineSpacing = 3.25f：height = 3 * 16 + 3.25 * 2
